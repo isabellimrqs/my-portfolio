@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="img/logo.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Isabelli Marques</title>
 </head>
 <body>
@@ -15,17 +17,17 @@
         <div class="interface">
             <div class="logo">
                 <a href="#">
-                    <img src="img/logo2.png" alt="Logo">
+                    <img src="img/logo2.png" alt="Logo" id="home">
                 </a>
             </div>
         
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Specialties</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#specialties">Specialties</a></li>
+                    <li><a href="#about" >About</a></li>
+                    <li><a href="#projects">Projects</a></li>
                 </ul>
             </nav>
 
@@ -34,28 +36,53 @@
                     <button>Contact</button>
                 </a>
             </div>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#specialties">Specialties</a></li>
+                            <li><a href="#about" >About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </nav>
+                    
+            </div>
+
+            <div class="overlay-menu"></div>
+            
+
         </div>
     </header>
 
     <main>
-        <section class="topo-do-site">
+        <section class="topo-do-site" >
         <div class="interface">
             <div class="flex">
                 <div class="txt-topo-site">
-                        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit<span>.</span></h1>
+                        <h1>Making my own destiny<span>.</span></h1>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid cum dolores veritatis porro mollitia voluptatem assumenda omnis libero? Doloribus suscipit, iure necessitatibus blanditiis placeat enim optio voluptatem architecto amet alias.</p>
 
                         <div class="btn-contato"><a href=""><button>Reach Me</button></a></div>
                 </div>
-                <div class="img-topo-site">
-                    <img src="" alt="Minha foto">
+                <div class="img-topo-site" >
+                    <img src="img/minhafoto2.png" alt="Minha foto">
                 </div>
                         
             </div>
         </div>
         </section>
 
-        <section class="especialidades">
+        <section class="especialidades" id="specialties">
             <div class="interface">
                 <h2 class="titulo">MY <span>SPECIALTIES.</span></h2>
                 <div class="flex">
@@ -77,27 +104,27 @@
             </div>
         </section>
         
-        <section class="sobre">
-            <div class="interface">
-                <div class="flex">
+        <section class="sobre"id="about" >
+            <div class="interface" >
+                <div class="flex" >
                     <div class="img-sobre">
-                        <img src="" alt="Minha Foto">
+                        <img src="img/minhafoto2.png" alt="Minha Foto">
                     </div>
                     <div class="txt-sobre">
                         <h2>GREAT TO SEEING YOU, <span>I'M ISABELLI MARQUES.</span> </h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt voluptas illo quibusdam vitae, repellendus perferendis perspiciatis consequatur dolor distinctio, expedita hic commodi ea dicta aperiam obcaecati, optio magnam? Adipisci?</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt voluptas illo quibusdam vitae, repellendus perferendis perspiciatis consequatur dolor distinctio, expedita hic commodi ea dicta aperiam obcaecati, optio magnam? Adipisci?</p>
                         <div class="btn-social">
-                            <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="#"><button><i class="bi bi-github"></i></button></a>
+                            <a href="https://www.instagram.com/isabellimrqs/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://www.linkedin.com/in/isabelli-marques-615b79210/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://github.com/isabellimrqs" target="_blank"><button><i class="bi bi-github"></i></button></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="projects">
             <div class="interface">
                 <h2 class="titulo">MY <span>PORTFOLIO.</span></h2>
                 <div class="flex">
@@ -137,9 +164,9 @@
                             <img src="img/logo2.png" alt="Logo">
                         </div>
                         <div class="btn-social">
-                            <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="#"><button><i class="bi bi-github"></i></button></a>
+                            <a href="https://www.instagram.com/isabellimrqs/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://www.linkedin.com/in/isabelli-marques-615b79210/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://github.com/isabellimrqs" target="_blank"><button><i class="bi bi-github"></i></button></a>
                         </div>
                     </div>
                 </div>

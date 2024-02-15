@@ -4,6 +4,23 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;               
+}
+  
+body::-webkit-scrollbar-track {
+    background: rgb(66, 65, 65);       
+}
+  
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;       
+    border: 3px solid blueviolet;  
+}
+
 body{
     background-color: black;
     height: 100vh;
@@ -33,6 +50,7 @@ button:hover, form .btn-enviar input:hover {
     box-shadow: 0px 0px 8px rgb(147, 80, 209);
     transform: scale(1.05);
 }
+
 
 h2.titulo{
     color: #fff;
@@ -66,7 +84,7 @@ header a {
     transition: .2s;
 }
 
-header a:hover{
+header a.menu-desktop:hover{
     color: #ffff;
     transform: scale(1.05);
 }
@@ -75,9 +93,76 @@ header nav ul {
     list-style-type: none;
 }
 
-header nav li {
+header nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px;
+}
+
+/* Estilo do menu mobile */
+
+.btn-abrir-menu{
+    color: blueviolet;
+    font-size: 42px;
+    /* display: none; */
+}
+
+.overlay-menu{
+    background-color: rgba(0, 0, 0, 0.563);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+.menu-mobile{
+    background-color: black;
+    height: 100vh;
+    position:fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 70%;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 4%;
+    display: block;
+}
+
+
+.menu-mobile nav ul li a:hover{
+    background-color: blueviolet;
+    color: black;
+}
+
+.menu-mobile .btn-fechar i {
+    color: blueviolet;
+    font-size: 30px;
+}
+
+.btn-fechar {
+    padding: 20px 5%;
 }
 
 /* Estilo do Topo do Site */
@@ -111,6 +196,7 @@ section .topo-do-site .flex {
 .topo-do-site .img-topo-site img {
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
+    /* box-shadow:  0px 0px 8px rgb(147, 80, 209); */
 }
 
 @keyframes flutuar{
@@ -289,6 +375,7 @@ form .btn-enviar input[type=submit]{
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
+    border-radius: 45px;
 }
 
 /* Estilo do Rodapé */
@@ -317,4 +404,102 @@ footer .line-footer p i{
 footer .line-footer p a {
     color: #fff;
     text-decoration: none;
+}
+
+
+@media screen and (max-width:1020px){
+    /* Classes Gerais */
+    .flex{
+        flex-direction: column;
+    }
+
+    h2.titulo{
+        font-size: 30px;
+    }
+
+    /* Cabeçalho */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 30px;
+
+    }
+    .topo-do-site .img-topo-site img {
+        width:100%;
+    }
+
+    /* Estilo das especialidades */
+    section.especialidades{
+        padding: 10px 8%;
+        
+    }
+
+    section.especialidades .flex{
+        gap: 10px;
+    }
+
+    .topo-do-site h1 {
+        font-size: 42px;
+        line-height: 40px;
+    }
+    
+    .topo-do-site .txt-topo-site h1 span {
+        font-size: 70px;
+    }
+    
+    /* Sobre */
+
+    .sobre .flex{
+        flex-direction: column-reverse;
+    }
+    
+    section.sobre{
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 32px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social{
+        text-align: center;
+    }
+
+    .sobre .img-sobre img{
+        width: 100%;
+    }
+
+    /* Portfolio */
+
+    section.portfolio{
+        padding: 8px 8%;
+    }
+
+    .img-port{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex{
+        gap: 60px
+    }
+
+    /* Footer */
+    footer .line-footer{
+        text-align: center;
+    }
+
+    /* Menu Lateral */
+    /* .btn-abrir-menu{
+        display: block;
+    } */
 }
