@@ -43,6 +43,10 @@ h2.titulo{
 h2.titulo span{
     color: blueviolet;
 }
+
+.logo {
+    width: 5px;
+}
 /* Estilo do cabeçalho */
 
 header{
@@ -182,7 +186,7 @@ section.sobre .flex{
     text-align: justify;
 }
 
-.sobre .txt-sobre .btn-social button{
+.btn-social button{
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -285,4 +289,32 @@ form .btn-enviar input[type=submit]{
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
+}
+
+/* Estilo do Rodapé */
+footer {
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid blueviolet;
+}
+
+footer .line-footer p i{
+    color: blueviolet;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+    text-decoration: none;
 }
