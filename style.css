@@ -65,6 +65,31 @@ h2.titulo span{
 .logo {
     width: 5px;
 }
+
+.botao-voltar-topo{
+    padding: 40px 5%;
+    width: 5px;
+    height: 5px;
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+
+}
+
+.botao-voltar-topo i {
+    color: blueviolet;
+    font-size: 45px;  
+}
+
+.botao-voltar-topo button {
+    border: none;
+    background: black;
+    border-radius: 65px;
+    width: 0;
+    cursor: pointer;
+    
+}
+ 
 /* Estilo do cabeçalho */
 
 header{
