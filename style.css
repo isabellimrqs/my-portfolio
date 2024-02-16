@@ -84,7 +84,7 @@ header a {
     transition: .2s;
 }
 
-header a.menu-desktop:hover{
+header a:hover{
     color: #ffff;
     transform: scale(1.05);
 }
@@ -103,7 +103,8 @@ header nav.menu-desktop ul li {
 .btn-abrir-menu{
     color: blueviolet;
     font-size: 42px;
-    /* display: none; */
+    display: none; 
+    cursor: pointer;
 }
 
 .overlay-menu{
@@ -124,7 +125,7 @@ header nav.menu-desktop ul li {
     top: 0;
     right: 0;
     z-index: 99999;
-    width: 70%;
+    width: 0%;
     overflow: hidden;
     transition: .2s;
 }
@@ -163,6 +164,7 @@ header nav.menu-desktop ul li {
 
 .btn-fechar {
     padding: 20px 5%;
+    cursor: pointer;
 }
 
 /* Estilo do Topo do Site */
@@ -337,6 +339,17 @@ section.formulario{
     padding: 80px 4%;
 }
 
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+
 form{
     max-width: 500px;
     margin: 0 auto;
@@ -499,7 +512,7 @@ footer .line-footer p a {
     }
 
     /* Menu Lateral */
-    /* .btn-abrir-menu{
+    .btn-abrir-menu{
         display: block;
-    } */
+    }
 }
