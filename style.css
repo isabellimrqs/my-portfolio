@@ -73,8 +73,27 @@ h2.titulo span{
     position: fixed;
     right: 10px;
     bottom: 50px;
-
+    opacity: 0;
+    visibility: hidden;
 }
+
+.botao-voltar-topo.active{
+    opacity: 1;
+    visibility: visible;
+    animation: moveToRight 2s ease-in-out; 
+    animation-timeline: view();
+    
+}
+
+@keyframes moveToRight {
+    100% {
+      transform: translateX(0px);
+    }
+    0% {
+      transform: translateX(300px);
+    }
+  }
+
 
 .botao-voltar-topo i {
     color: blueviolet;
@@ -540,4 +559,20 @@ footer .line-footer p a {
     .btn-abrir-menu{
         display: block;
     }
+
+    .botao-voltar-topo{
+        padding: 40px ;
+        position: fixed;
+        z-index: 99999;
+    }
+
+    /* Botão de voltar ao topo */
+    .botao-voltar-topo i {
+        font-size: 35px;  
+    }
+    
+    
+    
+
+    
 }

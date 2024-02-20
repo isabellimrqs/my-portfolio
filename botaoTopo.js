@@ -4,3 +4,9 @@ const scrollToTop = () => {
    behavior: 'smooth'
     })
    }
+
+window.addEventListener('scroll', function(){
+    let scroll = document.querySelector('.botao-voltar-topo')
+        scroll.classList.toggle('active', window.scrollY > 450)
+
+})
