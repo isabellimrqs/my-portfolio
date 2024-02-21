@@ -8,6 +8,11 @@ html{
     scroll-behavior: smooth;
 }
 
+.efeito-txt-topo, .efeito-img-topo, .titulo .efeito-especialidades1, 
+.efeito-especialidades2,.efeito-especialidades3, .efeito-img-sobre, .efeito-txt-sobre{
+    visibility: hidden;
+}
+
 body::-webkit-scrollbar {
     width: 5px;               
 }
@@ -569,6 +574,10 @@ footer .line-footer p a {
     /* Botão de voltar ao topo */
     .botao-voltar-topo i {
         font-size: 35px;  
+    }
+
+    .btn-social button i{
+        color: black;
     }
     
     
